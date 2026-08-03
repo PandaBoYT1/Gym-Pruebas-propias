@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node -v; npm -v; try { docker -v } catch { \"no docker\" }; try { \\(Get-Command psql -ErrorAction Stop\\).Source } catch { \"no psql\" }; try { \\(Get-Command pnpm -ErrorAction Stop\\).Source } catch { \"no pnpm\" })",
+      "PowerShell(Test-Path \"C:\\\\Program Files\\\\nodejs\\\\node.exe\"; Test-Path \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\"; Test-Path \"$env:APPDATA\\\\npm\"; winget list --id OpenJS.NodeJS 2>&1 | Select-Object -Last 5)",
+      "PowerShell(node -v; npm -v; try { docker -v } catch { \"no docker\" }; try { \\(Get-Command psql -ErrorAction Stop\\).Source } catch { \"no psql\" })",
+      "PowerShell($env:Path += \";C:\\\\Program Files\\\\nodejs\"; node -v; npm -v)",
+      "Bash(npx tsc *)"
+    ]
+  }
+}
